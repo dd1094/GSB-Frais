@@ -17,12 +17,7 @@
 
     <h1>Connexion</h1>
     
-    <form action="/connexion" method="POST" class="form" name="formulaireConnexion">
-        <label>login</label>
-        <input name="login" />
-        <label>Mot de passe</label>
-        <input name="mdp" type="password" />
-        <button>Se connecter</button>
+    <a href="{{path('creerFiche')}}">Renseigner fiche de frais</a>
     </form>
 
     {% set lienPage = path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) %}

@@ -76,16 +76,12 @@ class ConnexionController extends AbstractController
             print_r($e);
         }
     }
-        
-        
-
-
+    
     public function seDeconnecter(Request $request){
         $session = $request->getSession();
         $session->invalidate();
         return $this->redirect('index/index.html.twig');
     }
-
 
 
 

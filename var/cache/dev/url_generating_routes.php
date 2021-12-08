@@ -20,4 +20,5 @@ return [
     'connexion' => [['echec', 'login'], ['echec' => null, 'login' => null, '_controller' => 'App\\Controller\\ConnexionController::index'], [], [['variable', '/', '[^/]++', 'login', true], ['variable', '/', '[^/]++', 'echec', true], ['text', '/connexion']], [], []],
     'seConnecter' => [[], ['_controller' => 'App\\Controller/ConnexionController::seConnecter'], [], [['text', '/seConnecter']], [], []],
     'seDeconnecter' => [[], ['_controller' => 'App\\Controller/ConnexionController::seDeconnecter'], [], [['text', '/']], [], []],
+    'creerFiche' => [[], ['_controller' => 'App\\Controller\\CreerFicheController::index'], [], [['text', '/creerFiche']], [], []],
 ];

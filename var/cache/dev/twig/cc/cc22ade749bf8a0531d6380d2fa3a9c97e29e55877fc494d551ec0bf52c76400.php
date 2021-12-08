@@ -65,7 +65,7 @@ class __TwigTemplate_1fd0f24beb26b40e6c111c38e71c5d2262600b2856e0b41604b51599280
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Hello CreerFicheController!";
+        echo "Connexion";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -88,25 +88,36 @@ class __TwigTemplate_1fd0f24beb26b40e6c111c38e71c5d2262600b2856e0b41604b51599280
         echo "<style>
     .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    .form{
+        display: flex;
+        flex-direction:column;
+        width:min-content;
+    }
 </style>
 
 <div class=\"example-wrapper\">
-    <h1>Hello ";
-        // line 12
-        echo twig_escape_filter($this->env, (isset($context["controller_name"]) || array_key_exists("controller_name", $context) ? $context["controller_name"] : (function () { throw new RuntimeError('Variable "controller_name" does not exist.', 12, $this->source); })()), "html", null, true);
-        echo "! ✅</h1>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href=\"";
-        // line 16
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\CodeExtension']->getFileLink("/var/www/html/GSB-Appli-Frais/src/Controller/CreerFicheController.php", 0), "html", null, true);
-        echo "\">src/Controller/CreerFicheController.php</a></code></li>
-        <li>Your template at <code><a href=\"";
-        // line 17
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\CodeExtension']->getFileLink("/var/www/html/GSB-Appli-Frais/templates/creer_fiche/index.html.twig", 0), "html", null, true);
-        echo "\">templates/creer_fiche/index.html.twig</a></code></li>
-    </ul>
+    <h1>Connexion</h1>
+    <form action=\"/creerFiche\" method=\"POST\" class=\"form\" name=\"formulaireConnexion\">
+        <label>Mois(2 chiffres)</label>
+        <input name=\"mois\" type=\"number\" name=\"mois\" size=\"2\" max=\"12\" min=\"0\"/>
+        <label>Année(4 chiffres)</label>
+        <input name=\"annee\" type=\"number\" name=\"annee\" size=\"2\" max=\"12\" min=\"0\"/>
+        <h3>Frais Forfait<h3>
+         <label>Repas midi :</label>
+        <input name=\"RepasMidi\" type=\"number\" name=\"RepasMidi\" size=\"2\" max=\"12\" min=\"0\"/>
+         <label>Nuitées</label>
+        <input name=\"nuitees\" type=\"number\" name=\"nuitees\" size=\"2\" max=\"12\" min=\"0\"/>
+         <label>Etape :</label>
+        <input name=\"etape\" type=\"number\" name=\"etape\" size=\"2\" max=\"12\" min=\"0\"/>
+         <label>Km</label>
+        <input name=\"km\" type=\"number\" name=\"km\" size=\"2\" max=\"12\" min=\"0\"/>
+        <h3>Hors Forfait<h3>
+
+    </form>
+
+    
+
 </div>
 ";
         
@@ -129,29 +140,49 @@ class __TwigTemplate_1fd0f24beb26b40e6c111c38e71c5d2262600b2856e0b41604b51599280
 
     public function getDebugInfo()
     {
-        return array (  107 => 17,  103 => 16,  96 => 12,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Hello CreerFicheController!{% endblock %}
+{% block title %}Connexion{% endblock %}
 
 {% block body %}
 <style>
     .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    .form{
+        display: flex;
+        flex-direction:column;
+        width:min-content;
+    }
 </style>
 
 <div class=\"example-wrapper\">
-    <h1>Hello {{ controller_name }}! ✅</h1>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href=\"{{ '/var/www/html/GSB-Appli-Frais/src/Controller/CreerFicheController.php'|file_link(0) }}\">src/Controller/CreerFicheController.php</a></code></li>
-        <li>Your template at <code><a href=\"{{ '/var/www/html/GSB-Appli-Frais/templates/creer_fiche/index.html.twig'|file_link(0) }}\">templates/creer_fiche/index.html.twig</a></code></li>
-    </ul>
+    <h1>Connexion</h1>
+    <form action=\"/creerFiche\" method=\"POST\" class=\"form\" name=\"formulaireConnexion\">
+        <label>Mois(2 chiffres)</label>
+        <input name=\"mois\" type=\"number\" name=\"mois\" size=\"2\" max=\"12\" min=\"0\"/>
+        <label>Année(4 chiffres)</label>
+        <input name=\"annee\" type=\"number\" name=\"annee\" size=\"2\" max=\"12\" min=\"0\"/>
+        <h3>Frais Forfait<h3>
+         <label>Repas midi :</label>
+        <input name=\"RepasMidi\" type=\"number\" name=\"RepasMidi\" size=\"2\" max=\"12\" min=\"0\"/>
+         <label>Nuitées</label>
+        <input name=\"nuitees\" type=\"number\" name=\"nuitees\" size=\"2\" max=\"12\" min=\"0\"/>
+         <label>Etape :</label>
+        <input name=\"etape\" type=\"number\" name=\"etape\" size=\"2\" max=\"12\" min=\"0\"/>
+         <label>Km</label>
+        <input name=\"km\" type=\"number\" name=\"km\" size=\"2\" max=\"12\" min=\"0\"/>
+        <h3>Hors Forfait<h3>
+
+    </form>
+
+    
+
 </div>
 {% endblock %}
 ", "creer_fiche/index.html.twig", "/var/www/html/GSB-Appli-Frais/templates/creer_fiche/index.html.twig");

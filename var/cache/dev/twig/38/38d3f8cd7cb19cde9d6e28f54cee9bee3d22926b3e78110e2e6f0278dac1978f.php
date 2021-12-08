@@ -99,32 +99,30 @@ class __TwigTemplate_639f30473e0051e6e679e88c388d3d93d48f2e32971e69adfcb41da9c8e
 
     <h1>Connexion</h1>
     
-    <form action=\"/connexion\" method=\"POST\" class=\"form\" name=\"formulaireConnexion\">
-        <label>login</label>
-        <input name=\"login\" />
-        <label>Mot de passe</label>
-        <input name=\"mdp\" type=\"password\" />
-        <button>Se connecter</button>
+    <a href=\"";
+        // line 20
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("creerFiche");
+        echo "\">Renseigner fiche de frais</a>
     </form>
 
     ";
-        // line 28
-        $context["lienPage"] = $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 28, $this->source); })()), "request", [], "any", false, false, false, 28), "attributes", [], "any", false, false, false, 28), "get", [0 => "_route"], "method", false, false, false, 28), twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 28, $this->source); })()), "request", [], "any", false, false, false, 28), "attributes", [], "any", false, false, false, 28), "get", [0 => "_route_params"], "method", false, false, false, 28));
-        // line 29
+        // line 23
+        $context["lienPage"] = $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 23, $this->source); })()), "request", [], "any", false, false, false, 23), "attributes", [], "any", false, false, false, 23), "get", [0 => "_route"], "method", false, false, false, 23), twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 23, $this->source); })()), "request", [], "any", false, false, false, 23), "attributes", [], "any", false, false, false, 23), "get", [0 => "_route_params"], "method", false, false, false, 23));
+        // line 24
         echo "
     ";
-        // line 30
-        if ((0 === twig_compare((isset($context["lienPage"]) || array_key_exists("lienPage", $context) ? $context["lienPage"] : (function () { throw new RuntimeError('Variable "lienPage" does not exist.', 30, $this->source); })()), "/connexion/echec"))) {
-            // line 31
+        // line 25
+        if ((0 === twig_compare((isset($context["lienPage"]) || array_key_exists("lienPage", $context) ? $context["lienPage"] : (function () { throw new RuntimeError('Variable "lienPage" does not exist.', 25, $this->source); })()), "/connexion/echec"))) {
+            // line 26
             echo "        ";
             $context["styleErreur"] = "color:red; border-radius:5%; text-align:center";
-            // line 32
+            // line 27
             echo "        <p style=";
-            echo twig_escape_filter($this->env, (isset($context["styleErreur"]) || array_key_exists("styleErreur", $context) ? $context["styleErreur"] : (function () { throw new RuntimeError('Variable "styleErreur" does not exist.', 32, $this->source); })()), "html", null, true);
+            echo twig_escape_filter($this->env, (isset($context["styleErreur"]) || array_key_exists("styleErreur", $context) ? $context["styleErreur"] : (function () { throw new RuntimeError('Variable "styleErreur" does not exist.', 27, $this->source); })()), "html", null, true);
             echo ">L'indentifiant ou le mot de passe est incorrect.</p>
     ";
         }
-        // line 34
+        // line 29
         echo "    <a href =\"";
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
         echo "\">Se déconnecter</a>
@@ -151,7 +149,7 @@ class __TwigTemplate_639f30473e0051e6e679e88c388d3d93d48f2e32971e69adfcb41da9c8e
 
     public function getDebugInfo()
     {
-        return array (  128 => 34,  122 => 32,  119 => 31,  117 => 30,  114 => 29,  112 => 28,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  126 => 29,  120 => 27,  117 => 26,  115 => 25,  112 => 24,  110 => 23,  104 => 20,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -175,12 +173,7 @@ class __TwigTemplate_639f30473e0051e6e679e88c388d3d93d48f2e32971e69adfcb41da9c8e
 
     <h1>Connexion</h1>
     
-    <form action=\"/connexion\" method=\"POST\" class=\"form\" name=\"formulaireConnexion\">
-        <label>login</label>
-        <input name=\"login\" />
-        <label>Mot de passe</label>
-        <input name=\"mdp\" type=\"password\" />
-        <button>Se connecter</button>
+    <a href=\"{{path('creerFiche')}}\">Renseigner fiche de frais</a>
     </form>
 
     {% set lienPage = path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) %}

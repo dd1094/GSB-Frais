@@ -20,7 +20,7 @@ class CreerFicheController extends AbstractController
      */
     public function index(): Response
     {
-        return $this->render('creer_fiche/base.html.twig', [
+        return $this->render('creer_fiche/index.html.twig', [
             'controller_name' => 'CreerFicheController',
         ]);
     }

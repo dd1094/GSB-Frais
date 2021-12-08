@@ -19,6 +19,7 @@ return [
             [['_route' => 'seDeconnecter', '_controller' => 'App\\Controller/ConnexionController::seDeconnecter'], null, null, null, false, false, null],
         ],
         '/seConnecter' => [[['_route' => 'seConnecter', '_controller' => 'App\\Controller/ConnexionController::seConnecter'], null, null, null, false, false, null]],
+        '/creerFiche' => [[['_route' => 'creerFiche', '_controller' => 'App\\Controller\\CreerFicheController::index'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'
