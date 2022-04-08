@@ -13,6 +13,7 @@ return [
         '/_profiler/search_bar' => [[['_route' => '_profiler_search_bar', '_controller' => 'web_profiler.controller.profiler::searchBarAction'], null, null, null, false, false, null]],
         '/_profiler/phpinfo' => [[['_route' => '_profiler_phpinfo', '_controller' => 'web_profiler.controller.profiler::phpinfoAction'], null, null, null, false, false, null]],
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
+        '/consulter/fiche/contoller' => [[['_route' => 'consulter_fiche_contoller', '_controller' => 'App\\Controller\\ConsulterFicheContollerController::index'], null, null, null, false, false, null]],
         '/creer/fiche' => [[['_route' => 'creer_fiche', '_controller' => 'App\\Controller\\CreerFicheController::index'], null, null, null, false, false, null]],
         '/' => [
             [['_route' => 'index', '_controller' => 'App\\Controller\\AccueilController::index'], null, null, null, false, false, null],

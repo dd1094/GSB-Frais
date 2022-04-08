@@ -345,6 +345,13 @@
         <argument type="service" id=".service_locator.W9y3dzm.App\Controller\ConnexionController"/>
       </call>
     </service>
+    <service id="App\Controller\ConsulterFicheContollerController" class="App\Controller\ConsulterFicheContollerController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.W9y3dzm.App\Controller\ConsulterFicheContollerController"/>
+      </call>
+    </service>
     <service id="App\Controller\CreerFicheController" class="App\Controller\CreerFicheController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -5544,6 +5551,9 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ConnexionController" class="App\Controller\ConnexionController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ConnexionController" class="App\Controller\ConnexionController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\ConnexionController" class="App\Controller\ConnexionController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ConsulterFicheContollerController" class="App\Controller\ConsulterFicheContollerController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ConsulterFicheContollerController" class="App\Controller\ConsulterFicheContollerController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\ConsulterFicheContollerController" class="App\Controller\ConsulterFicheContollerController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\CreerFicheController" class="App\Controller\CreerFicheController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\CreerFicheController" class="App\Controller\CreerFicheController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\CreerFicheController" class="App\Controller\CreerFicheController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -6224,6 +6234,12 @@
     <service id=".service_locator.W9y3dzm.App\Controller\ConnexionController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\ConnexionController"/>
       <argument>App\Controller\ConnexionController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.W9y3dzm" method="withContext"/>
+    </service>
+    <service id=".service_locator.W9y3dzm.App\Controller\ConsulterFicheContollerController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\ConsulterFicheContollerController"/>
+      <argument>App\Controller\ConsulterFicheContollerController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.W9y3dzm" method="withContext"/>
     </service>
